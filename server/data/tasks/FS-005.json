@@ -8,19 +8,73 @@
   "timeLimit": null,
   "basePoints": 330,
   "requiredRankLevel": 1,
-  "emojiSet": "tech_set2",
+  "emojiSet": "tech_set1",
   "examples": [
     {
-      "input": [["⚙️", "🔧"], ["🛠️", "🔨"]],
-      "output": [["🛠️", "🔨"], ["⚙️", "🔧"]]
+      "input": [
+        [
+          8,
+          1
+        ],
+        [
+          1,
+          9
+        ]
+      ],
+      "output": [
+        [
+          1,
+          9
+        ],
+        [
+          8,
+          1
+        ]
+      ]
     },
     {
-      "input": [["⚛️", "⬛"], ["⬛", "🎛️"]],
-      "output": [["⬛", "🎛️"], ["⚛️", "⬛"]]
+      "input": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          7
+        ]
+      ],
+      "output": [
+        [
+          0,
+          7
+        ],
+        [
+          2,
+          0
+        ]
+      ]
     }
   ],
-  "testInput": [["🔋", "🖱️"], ["⚡", "🎛️"]],
-  "testOutput": [["⚡", "🎛️"], ["🔋", "🖱️"]],
+  "testInput": [
+    [
+      5,
+      3
+    ],
+    [
+      6,
+      7
+    ]
+  ],
+  "testOutput": [
+    [
+      6,
+      7
+    ],
+    [
+      5,
+      3
+    ]
+  ],
   "hints": [
     "Elements are reflected across the horizontal center line.",
     "Top row becomes bottom row and vice versa.",

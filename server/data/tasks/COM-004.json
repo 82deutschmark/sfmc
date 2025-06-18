@@ -1,41 +1,53 @@
 {
   "id": "COM-004",
-  "title": "Advanced Signal Cross Pattern",
-  "description": "Complex communication arrays require cross-pattern extraction. Only center row and center column elements remain active.",
+  "title": "Relay Diagonal Reflection",
+  "description": "Recalculate relay grid by reflecting across the main diagonal (top-left to bottom-right).",
   "category": "📡 Communications",
-  "difficulty": "Advanced",
+  "difficulty": "Basic",
   "gridSize": 3,
-  "timeLimit": 110,
-  "basePoints": 950,
-  "requiredRankLevel": 3,
-  "emojiSet": "tech_set1",
+  "timeLimit": null,
+  "basePoints": 460,
+  "requiredRankLevel": 1,
+  "emojiSet": "tech_set2",
   "examples": [
     {
       "input": [
-        ["📡", "📱", "🛩️"],
-        ["🔭", "🖥️", "🔭"],
-        ["🛩️", "⚡", "⌨️"]
+        [1, 2, 0],
+        [0, 3, 4],
+        [5, 0, 6]
       ],
       "output": [
-        ["⬛", "📱", "⬛"],
-        ["🔭", "🖥️", "🔭"],
-        ["⬛", "⚡", "⬛"]
+        [1, 0, 5],
+        [2, 3, 0],
+        [0, 4, 6]
+      ]
+    },
+    {
+      "input": [
+        [7, 0, 0],
+        [8, 9, 0],
+        [0, 0, 1]
+      ],
+      "output": [
+        [7, 8, 0],
+        [0, 9, 0],
+        [0, 0, 1]
       ]
     }
   ],
   "testInput": [
-    ["🔋", "🔭", "📱"],
-    ["⚙️", "🖥️", "🔨"],
-    ["🔭", "🛩️", "🔭"]
+    [2, 0, 3],
+    [0, 4, 0],
+    [5, 0, 0]
   ],
   "testOutput": [
-    ["⬛", "🔭", "⬛"],
-    ["⚙️", "🖥️", "🔨"],
-    ["⬛", "🛩️", "⬛"]
+    [2, 0, 5],
+    [0, 4, 0],
+    [3, 0, 0]
   ],
   "hints": [
-    "Only the center row and center column are preserved.",
-    "Corner elements become empty spaces.",
-    "The pattern forms a cross shape in the output."
+    "Swap elements symmetrically across the main diagonal.",
+    "Row index becomes column index.",
+    "⬛ cells reflect just like any other value."
   ]
 }

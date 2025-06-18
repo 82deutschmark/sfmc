@@ -8,22 +8,76 @@
   "timeLimit": null,
   "basePoints": 310,
   "requiredRankLevel": 1,
-  "emojiSet": "tech_set2",
+  "emojiSet": "tech_set1",
   "examples": [
     {
-      "input": [["⚙️", "🔧"], ["🛠️", "⚙️"]],
-      "output": [["⚙️", "⬛"], ["⬛", "⚙️"]]
+      "input": [
+        [
+          8,
+          1
+        ],
+        [
+          1,
+          8
+        ]
+      ],
+      "output": [
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ]
     },
     {
-      "input": [["⚛️", "🎛️"], ["🔨", "⚛️"]],
-      "output": [["⚛️", "⬛"], ["⬛", "⚛️"]]
+      "input": [
+        [
+          2,
+          7
+        ],
+        [
+          9,
+          2
+        ]
+      ],
+      "output": [
+        [
+          2,
+          0
+        ],
+        [
+          0,
+          2
+        ]
+      ]
     }
   ],
-  "testInput": [["🔋", "🖱️"], ["⚡", "🔋"]],
-  "testOutput": [["🔋", "⬛"], ["⬛", "🔋"]],
+  "testInput": [
+    [
+      5,
+      3
+    ],
+    [
+      6,
+      5
+    ]
+  ],
+  "testOutput": [
+    [
+      5,
+      0
+    ],
+    [
+      0,
+      5
+    ]
+  ],
   "hints": [
     "Only elements that appear multiple times are preserved.",
-    "Elements that appear only once become empty spaces.",
+    "Elements that appear only once become ⬛ spaces.",
     "Look for the recurring pattern element in the grid."
   ]
 }

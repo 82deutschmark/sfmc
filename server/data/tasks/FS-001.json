@@ -8,19 +8,73 @@
   "timeLimit": null,
   "basePoints": 500,
   "requiredRankLevel": 1,
-  "emojiSet": "tech_set2",
+  "emojiSet": "tech_set1",
   "examples": [
     {
-      "input": [["⚙️", "⬛"], ["⬛", "🔧"]],
-      "output": [["🔧", "⬛"], ["⬛", "⚙️"]]
+      "input": [
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "output": [
+        [
+          1,
+          0
+        ],
+        [
+          0,
+          8
+        ]
+      ]
     },
     {
-      "input": [["🔨", "🛠️"], ["⬛", "⬛"]],
-      "output": [["⬛", "⬛"], ["🛠️", "🔨"]]
+      "input": [
+        [
+          9,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "output": [
+        [
+          0,
+          0
+        ],
+        [
+          1,
+          9
+        ]
+      ]
     }
   ],
-  "testInput": [["⚛️", "⬛"], ["🎛️", "⬛"]],
-  "testOutput": [["⬛", "🎛️"], ["⬛", "⚛️"]],
+  "testInput": [
+    [
+      2,
+      0
+    ],
+    [
+      7,
+      0
+    ]
+  ],
+  "testOutput": [
+    [
+      0,
+      7
+    ],
+    [
+      0,
+      2
+    ]
+  ],
   "hints": [
     "Notice how the mechanical components change positions.",
     "The transformation swaps items diagonally across the grid.",

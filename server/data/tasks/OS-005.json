@@ -35,7 +35,7 @@
   ],
   "hints": [
     "Only the border/perimeter elements are preserved.",
-    "The center element is replaced with empty space.",
+    "The center element is replaced with ⬛.",
     "Edge elements (top, bottom, left, right rows/columns) remain unchanged."
   ]
 }

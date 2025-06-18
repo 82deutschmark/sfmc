@@ -47,7 +47,7 @@
   ],
   "hints": [
     "Look for the dominant color pattern in the corners.",
-    "Empty spaces are filled with the center color.",
+    "⬛ spaces are filled with the center color.",
     "The transformation creates a checkerboard-like pattern."
   ]
 }

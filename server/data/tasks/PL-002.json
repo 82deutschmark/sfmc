@@ -1,53 +1,29 @@
 {
   "id": "PL-002",
-  "title": "Launch Sequence Color Coding",
-  "description": "Pre-launch systems require color propagation analysis. Objects spread their colors to adjacent empty spaces.",
+  "title": "Launch Grid Rotation",
+  "description": "Guardian, critical update from Space Command! The primary launch vector for Operation Silent Sentry has been compromised by solar flare activity. We need an immediate recalibration. The launch grid, a 3x3 matrix representing targeting coordinates, must be rotated 90 degrees clockwise. This ensures the payload avoids the radiation surge and reaches its designated orbit. Your precision is paramount – the success of this multi-billion dollar asset and national security depends on your swift and accurate adjustment. Execute the rotation and confirm the new grid configuration.",
   "category": "🚀 Pre-Launch Ops",
-  "difficulty": "Intermediate",
+  "difficulty": "Basic",
   "gridSize": 3,
-  "timeLimit": 100,
-  "basePoints": 700,
-  "requiredRankLevel": 2,
-  "emojiSet": "tech_set1",
+  "timeLimit": null,
+  "basePoints": 500,
+  "requiredRankLevel": 1,
+  "emojiSet": "nav_alerts",
   "examples": [
     {
-      "input": [
-        ["🔋", "⬛", "⬛"],
-        ["⬛", "⬛", "⬛"],
-        ["⬛", "⬛", "🔋"]
-      ],
-      "output": [
-        ["🔋", "🔋", "⬛"],
-        ["🔋", "⬛", "🔋"],
-        ["⬛", "🔋", "🔋"]
-      ]
+      "input": [[1,2,3],[4,5,6],[7,8,9]],
+      "output": [[7,4,1],[8,5,2],[9,6,3]]
     },
     {
-      "input": [
-        ["⬛", "🛩️", "⬛"],
-        ["⬛", "⬛", "⬛"],
-        ["📡", "⬛", "⬛"]
-      ],
-      "output": [
-        ["🛩️", "🛩️", "🛩️"],
-        ["📡", "⬛", "⬛"],
-        ["📡", "📡", "⬛"]
-      ]
+      "input": [[0,1,0],[2,0,3],[0,4,0]],
+      "output": [[0,2,0],[4,0,1],[0,3,0]]
     }
   ],
-  "testInput": [
-    ["⚡", "⬛", "⬛"],
-    ["⬛", "⬛", "⬛"],
-    ["⬛", "⬛", "🔭"]
-  ],
-  "testOutput": [
-    ["⚡", "⚡", "⬛"],
-    ["⚡", "⬛", "🔭"],
-    ["⬛", "🔭", "🔭"]
-  ],
+  "testInput": [[9,8,7],[6,5,4],[3,2,1]],
+  "testOutput": [[3,6,9],[2,5,8],[1,4,7]],
   "hints": [
-    "Each object expands to fill one adjacent empty space.",
-    "Objects spread horizontally and vertically, not diagonally.",
-    "Multiple objects can expand simultaneously without overlapping."
+    "Rotate the entire grid 90 degrees clockwise.",
+    "The element at (row, col) moves to (col, gridSize - 1 - row).",
+    "Imagine turning a square piece of paper one quarter turn to the right."
   ]
 }

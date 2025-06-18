@@ -5,7 +5,7 @@
   "category": "🔐 Security Systems",
   "difficulty": "Basic",
   "gridSize": 3,
-  "timeLimit": 80,
+  "timeLimit": null,
   "basePoints": 380,
   "requiredRankLevel": 1,
   "emojiSet": "status_main",

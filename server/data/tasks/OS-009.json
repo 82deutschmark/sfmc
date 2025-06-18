@@ -24,6 +24,6 @@
   "hints": [
     "Find elements that appear in both row and column positions.",
     "Elements that repeat across row/column boundaries are preserved.",
-    "Unique elements in their row or column become empty spaces."
+    "Unique elements in their row or column become ⬛."
   ]
 }

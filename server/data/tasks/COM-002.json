@@ -1,53 +1,53 @@
 {
   "id": "COM-002",
-  "title": "Signal Interference Cancellation",
-  "description": "Communication arrays suffer from signal interference. Remove interference patterns while preserving primary signals.",
+  "title": "Relay Rotation Protocol",
+  "description": "Rotate relay indicator grid 90° clockwise to align with new satellite orientation.",
   "category": "📡 Communications",
-  "difficulty": "Intermediate",
+  "difficulty": "Basic",
   "gridSize": 3,
-  "timeLimit": 110,
-  "basePoints": 580,
-  "requiredRankLevel": 2,
-  "emojiSet": "tech_set1",
+  "timeLimit": null,
+  "basePoints": 420,
+  "requiredRankLevel": 1,
+  "emojiSet": "tech_set2",
   "examples": [
     {
       "input": [
-        ["📡", "🖥️", "📡"],
-        ["🖥️", "❌", "🖥️"],
-        ["📡", "🖥️", "📡"]
+        [1, 0, 2],
+        [3, 4, 0],
+        [0, 5, 6]
       ],
       "output": [
-        ["📡", "⬛", "📡"],
-        ["⬛", "⬛", "⬛"],
-        ["📡", "⬛", "📡"]
+        [0, 3, 1],
+        [5, 4, 0],
+        [6, 0, 2]
       ]
     },
     {
       "input": [
-        ["🛩️", "❌", "📱"],
-        ["❌", "🖥️", "❌"],
-        ["🔭", "❌", "🔭"]
+        [0, 7, 0],
+        [8, 0, 9],
+        [0, 0, 0]
       ],
       "output": [
-        ["🛩️", "⬛", "📱"],
-        ["⬛", "🖥️", "⬛"],
-        ["🔭", "⬛", "🔭"]
+        [0, 8, 0],
+        [0, 0, 7],
+        [0, 9, 0]
       ]
     }
   ],
   "testInput": [
-    ["📡", "❌", "🛩️"],
-    ["❌", "🖥️", "❌"],
-    ["📱", "❌", "🔭"]
+    [2, 0, 0],
+    [0, 3, 4],
+    [5, 0, 0]
   ],
   "testOutput": [
-    ["📡", "⬛", "🛩️"],
-    ["⬛", "🖥️", "⬛"],
-    ["📱", "⬛", "🔭"]
+    [5, 0, 2],
+    [0, 3, 0],
+    [0, 4, 0]
   ],
   "hints": [
-    "Remove all interference markers (❌) from the grid.",
-    "Replace interference with empty space (⬛).",
-    "Keep all communication devices and valid signals intact."
+    "Rotate the entire grid 90° clockwise.",
+    "Rows become columns from left to right.",
+    "⬛ cells rotate just like any other value."
   ]
 }

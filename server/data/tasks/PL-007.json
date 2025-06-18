@@ -1,45 +1,29 @@
 {
   "id": "PL-007",
-  "title": "Advanced Launch Grid Compression",
-  "description": "Complex pre-launch systems require grid compression algorithms. Multiple elements condense into concentrated patterns.",
+  "title": "Pre-Launch Main Diagonal Isolation",
+  "description": "Isolate main diagonal indicators; everything off-diagonal becomes background before ignition.",
   "category": "🚀 Pre-Launch Ops",
-  "difficulty": "Advanced",
-  "gridSize": 4,
-  "timeLimit": 200,
-  "basePoints": 1320,
-  "requiredRankLevel": 3,
+  "difficulty": "Basic",
+  "gridSize": 3,
+  "timeLimit": null,
+  "basePoints": 560,
+  "requiredRankLevel": 1,
   "emojiSet": "tech_set1",
   "examples": [
     {
-      "input": [
-        ["🔋", "⬛", "🔋", "⬛"],
-        ["⬛", "🔋", "⬛", "🔋"],
-        ["📡", "⬛", "📡", "⬛"],
-        ["⬛", "🔭", "⬛", "🔭"]
-      ],
-      "output": [
-        ["🔋", "🔋", "⬛", "⬛"],
-        ["🔋", "🔋", "⬛", "⬛"],
-        ["📡", "📡", "⬛", "⬛"],
-        ["🔭", "🔭", "⬛", "⬛"]
-      ]
+      "input": [[1,2,3],[4,5,6],[7,8,9]],
+      "output": [[1,0,0],[0,5,0],[0,0,9]]
+    },
+    {
+      "input": [[0,4,0],[3,0,6],[0,2,0]],
+      "output": [[0,0,0],[0,0,0],[0,0,0]]
     }
   ],
-  "testInput": [
-    ["🛩️", "⬛", "🛩️", "⬛"],
-    ["⬛", "⚡", "⬛", "⚡"],
-    ["🛩️", "⬛", "🛩️", "⬛"],
-    ["⬛", "🎛️", "⬛", "🎛️"]
-  ],
-  "testOutput": [
-    ["🛩️", "🛩️", "⬛", "⬛"],
-    ["⚡", "⚡", "⬛", "⬛"],
-    ["🛩️", "🛩️", "⬛", "⬛"],
-    ["🎛️", "🎛️", "⬛", "⬛"]
-  ],
+  "testInput": [[2,0,1],[0,3,0],[4,0,5]],
+  "testOutput": [[2,0,0],[0,3,0],[0,0,5]],
   "hints": [
-    "Compress scattered elements to the left side of the grid.",
-    "Each row collects its non-empty elements into adjacent positions.",
-    "Right side becomes empty after compression operation."
+    "Keep only the main diagonal (top-left → bottom-right).",
+    "All off-diagonal cells become ⬛.",
+    "⬛ indicates cleared background."  
   ]
 }

@@ -1,29 +1,29 @@
 {
   "id": "PL-006",
-  "title": "Launch Matrix Checkerboard",
-  "description": "Pre-launch systems require checkerboard pattern generation. Create alternating pattern from input elements.",
+  "title": "Pre-Launch 180° Rotation",
+  "description": "Rotate the indicator grid 180° to verify orientation tolerances.",
   "category": "🚀 Pre-Launch Ops",
   "difficulty": "Basic",
-  "gridSize": 2,
+  "gridSize": 4,
   "timeLimit": null,
-  "basePoints": 345,
+  "basePoints": 540,
   "requiredRankLevel": 1,
   "emojiSet": "tech_set1",
   "examples": [
     {
-      "input": [["🔋", "🔋"], ["📡", "🔭"]],
-      "output": [["🔋", "🔋"], ["🔋", "🔋"]]
+      "input": [[1,0,0,2],[0,3,4,0],[0,5,6,0],[7,0,0,8]],
+      "output": [[8,0,0,7],[0,6,5,0],[0,4,3,0],[2,0,0,1]]
     },
     {
-      "input": [["🛩️", "⚡"], ["🛩️", "⌨️"]],
-      "output": [["🛩️", "⚡"], ["⚡", "🛩️"]]
+      "input": [[0,0,9,0],[0,8,0,7],[6,0,5,0],[0,4,0,0]],
+      "output": [[0,0,4,0],[0,5,0,6],[7,0,8,0],[0,9,0,0]]
     }
   ],
-  "testInput": [["🎛️", "🔭"], ["🔋", "⚙️"]],
-  "testOutput": [["🎛️", "🔭"], ["🔭", "🎛️"]],
+  "testInput": [[0,1,0,2],[3,0,4,0],[0,5,0,6],[7,0,8,0]],
+  "testOutput": [[0,8,0,7],[6,0,5,0],[0,4,0,3],[2,0,1,0]],
   "hints": [
-    "Create a checkerboard pattern using the top row elements.",
-    "Bottom row mirrors the top row with positions swapped.",
-    "Each 2x2 block alternates between two element types."
+    "Rotate the grid 180° (flip horizontally then vertically).",
+    "Each cell moves to its diagonally opposite position.",
+    "⬛ stays background after rotation."
   ]
 }

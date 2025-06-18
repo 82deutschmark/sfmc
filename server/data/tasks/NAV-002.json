@@ -5,9 +5,9 @@
   "category": "🧭 Navigation",
   "difficulty": "Intermediate",
   "gridSize": 3,
-  "timeLimit": 150,
+  "timeLimit": null,
   "basePoints": 600,
-  "requiredRankLevel": 2,
+  "requiredRankLevel": 1,
   "emojiSet": "nav_alerts",
   "examples": [
     {

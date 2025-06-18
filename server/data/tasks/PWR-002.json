@@ -1,41 +1,54 @@
 {
   "id": "PWR-002",
-  "title": "Advanced Power Grid Diagonal Extraction",
-  "description": "Complex power distribution networks require diagonal element isolation. Only main diagonal elements remain in the power matrix.",
+  "title": "Main Diagonal Isolation",
+  "description": "Complex power grids require isolating main diagonal conductors. Retain only components on the main diagonal; others become background (0).",
   "category": "⚡ Power Systems",
   "difficulty": "Advanced",
   "gridSize": 3,
-  "timeLimit": 150,
+  "timeLimit": null,
   "basePoints": 1150,
-  "requiredRankLevel": 3,
-  "emojiSet": "tech_set2",
+  "requiredRankLevel": 1,
+  "emojiSet": "tech_set1",
   "examples": [
     {
       "input": [
-        ["🔋", "⚡", "🖱️"],
-        ["🎛️", "⚙️", "📺"],
-        ["🔨", "🛠️", "⚛️"]
+        [1, 0, 2],
+        [0, 3, 0],
+        [4, 0, 5]
       ],
       "output": [
-        ["🔋", "⬛", "⬛"],
-        ["⬛", "⚙️", "⬛"],
-        ["⬛", "⬛", "⚛️"]
+        [1, 0, 0],
+        [0, 3, 0],
+        [0, 0, 5]
+      ]
+    },
+    {
+      "input": [
+        [0, 4, 5],
+        [6, 7, 8],
+        [9, 0, 1]
+      ],
+      "output": [
+        [0, 0, 0],
+        [0, 7, 0],
+        [0, 0, 1]
       ]
     }
   ],
   "testInput": [
-    ["📺", "🎛️", "⚛️"],
-    ["🖱️", "🛠️", "⚙️"],
-    ["⚡", "🎛️", "🔋"]
+    [2, 3, 0],
+    [0, 4, 0],
+    [1, 0, 5]
   ],
   "testOutput": [
-    ["📺", "⬛", "⬛"],
-    ["⬛", "🖱️", "⬛"],
-    ["⬛", "⬛", "🔋"]
+    [2, 0, 0],
+    [0, 4, 0],
+    [0, 0, 5]
   ],
   "hints": [
-    "Only elements on the main diagonal are preserved.",
-    "Main diagonal runs from top-left to bottom-right.",
-    "All other positions become empty spaces."
+    "Focus only on the main diagonal running top-left to bottom-right.",
+    "All non-diagonal positions become ⬛.",
+    "Diagonal elements keep their original values and positions."
   ]
+
 }

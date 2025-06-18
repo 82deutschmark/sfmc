@@ -1,29 +1,29 @@
 {
   "id": "PWR-005",
-  "title": "Power Grid Pattern Merge",
-  "description": "Energy distribution systems require pattern merging operations. Multiple power sources combine to create unified distribution patterns.",
+  "title": "Power Circuit Diagonal Swap",
+  "description": "Render the numeric glyph 3 on the power-status matrix. All ⬛ grids must be transformed into the glyph using the same token.",
   "category": "⚡ Power Systems",
-  "difficulty": "Basic",
-  "gridSize": 2,
+  "difficulty": "Advanced",
+  "gridSize": 13,
   "timeLimit": null,
-  "basePoints": 390,
+  "basePoints": 1200,
   "requiredRankLevel": 1,
-  "emojiSet": "tech_set2",
+  "emojiSet": "tech_set1",
   "examples": [
     {
-      "input": [["🔋", "⬛"], ["⬛", "⚡"]],
-      "output": [["🔋", "🔋"], ["⚡", "⚡"]]
+      "input": [[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0]],
+      "output": [[3,3,3,3,3,3,3,3],[0,0,0,0,0,0,0,3],[3,3,3,3,3,3,0,3],[3,0,0,0,0,3,0,3],[3,0,3,3,0,3,0,3],[3,0,3,3,3,3,0,3],[3,0,0,0,0,0,0,3],[3,3,3,3,3,3,3,3]]
     },
     {
-      "input": [["🖱️", "⬛"], ["⬛", "📺"]],
-      "output": [["🖱️", "🖱️"], ["📺", "📺"]]
+      "input": [[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0],[0,0,0,0,0,0]],
+      "output": [[3,3,3,3,3,3],[0,0,0,0,0,3],[3,3,3,3,0,3],[3,0,3,3,0,3],[3,0,0,0,0,3],[3,3,3,3,3,3]]
     }
   ],
-  "testInput": [["⚙️", "⬛"], ["⬛", "🎛️"]],
-  "testOutput": [["⚙️", "⚙️"], ["🎛️", "🎛️"]],
+  "testInput": [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]],
+  "testOutput": [[3,3,3,3],[0,0,0,3],[3,3,0,3],[3,3,3,3]],
   "hints": [
-    "Each power source expands horizontally to fill its row.",
-    "Diagonal elements propagate across their respective rows.",
-    "Empty spaces are filled by their row's power source."
+    "Draw the digit 3 using the same non-⬛ token across all sizes.",
+    "Top, middle and bottom rows become solid; rightmost column is solid; left half curves are formed with gaps.",
+    "Input grids are entirely ⬛; output must overlay the glyph exactly within bounds."
   ]
 }

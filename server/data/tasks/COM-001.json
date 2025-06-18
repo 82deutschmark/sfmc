@@ -1,53 +1,52 @@
 {
   "id": "COM-001",
-  "title": "Signal Relay Connection",
-  "description": "Communication arrays require connection path analysis. Find the shortest path between signal endpoints.",
+  "title": "Signal Relay Reflection",
+  "description": "Analyze communication relay indicators by reflecting the grid horizontally.",
   "category": "📡 Communications",
   "difficulty": "Basic",
   "gridSize": 3,
-  "timeLimit": 90,
+  "timeLimit": null,
   "basePoints": 400,
   "requiredRankLevel": 1,
-  "emojiSet": "tech_set1",
+  "emojiSet": "tech_set2",
   "examples": [
     {
       "input": [
-        ["📡", "⬛", "⬛"],
-        ["⬛", "⬛", "⬛"],
-        ["⬛", "⬛", "📱"]
+        [1, 0, 2],
+        [3, 0, 0],
+        [4, 5, 0]
       ],
       "output": [
-        ["📡", "🖥️", "⬛"],
-        ["⬛", "🖥️", "⬛"],
-        ["⬛", "🖥️", "📱"]
+        [2, 0, 1],
+        [0, 0, 3],
+        [0, 5, 4]
       ]
     },
     {
       "input": [
-        ["🛩️", "⬛", "⬛"],
-        ["⬛", "⬛", "⬛"],
-        ["⬛", "⬛", "⌨️"]
+        [0, 6, 0],
+        [7, 0, 8],
+        [0, 9, 0]
       ],
       "output": [
-        ["🛩️", "🖥️", "⬛"],
-        ["⬛", "🖥️", "⬛"],
-        ["⬛", "🖥️", "🔭"]
+        [0, 6, 0],
+        [8, 0, 7],
+        [0, 9, 0]
       ]
     }
   ],
   "testInput": [
-    ["📡", "⬛", "⬛"],
-    ["⬛", "⬛", "⬛"],
-    ["⬛", "⬛", "🔭"]
+    [0, 1, 2],
+    [0, 3, 0],
+    [4, 0, 5]
   ],
   "testOutput": [
-    ["📡", "🖥️", "⬛"],
-    ["⬛", "🖥️", "⬛"],
-    ["⬛", "🖥️", "🔭"]
+    [2, 1, 0],
+    [0, 3, 0],
+    [5, 0, 4]
   ],
   "hints": [
-    "Connect the two communication devices with a direct path.",
-    "Use signal bars (🖥️) to create the connection line.",
-    "The path follows the shortest route between endpoints."
+    "Flip the grid left-to-right.",
+    "First column becomes last column, second stays in middle (for 3×3)."
   ]
 }

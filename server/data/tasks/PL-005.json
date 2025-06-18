@@ -1,41 +1,29 @@
 {
   "id": "PL-005",
-  "title": "Advanced Launch Corner Extraction",
-  "description": "Complex pre-launch systems require corner element isolation. Only corner positions remain active in the transformation.",
+  "title": "Pre-Launch 90° Clockwise",
+  "description": "Rotate the indicator grid 90° clockwise to match launch orientation.",
   "category": "🚀 Pre-Launch Ops",
-  "difficulty": "Advanced",
+  "difficulty": "Basic",
   "gridSize": 3,
-  "timeLimit": 120,
-  "basePoints": 1000,
-  "requiredRankLevel": 3,
+  "timeLimit": null,
+  "basePoints": 520,
+  "requiredRankLevel": 1,
   "emojiSet": "tech_set1",
   "examples": [
     {
-      "input": [
-        ["🔋", "🔋", "📡"],
-        ["🛩️", "⚡", "🔭"],
-        ["🛩️", "🎛️", "⌨️"]
-      ],
-      "output": [
-        ["🔋", "⬛", "📡"],
-        ["⬛", "⬛", "⬛"],
-        ["🛩️", "⬛", "⌨️"]
-      ]
+      "input": [[1,0,2],[3,4,0],[5,0,6]],
+      "output": [[5,3,1],[0,4,0],[6,0,2]]
+    },
+    {
+      "input": [[0,7,0],[8,0,9],[0,0,0]],
+      "output": [[0,8,0],[0,0,7],[0,9,0]]
     }
   ],
-  "testInput": [
-    ["🔭", "🖥️", "🔋"],
-    ["⚙️", "🎛️", "🔨"],
-    ["🎛️", "⚡", "🛩️"]
-  ],
-  "testOutput": [
-    ["🔭", "⬛", "🔋"],
-    ["⬛", "⬛", "⬛"],
-    ["🎛️", "⬛", "🛩️"]
-  ],
+  "testInput": [[0,1,0],[2,0,3],[0,4,0]],
+  "testOutput": [[0,2,0],[4,0,1],[0,3,0]],
   "hints": [
-    "Only the four corner elements are preserved.",
-    "All edge and center elements become empty spaces.",
-    "Corner positions: top-left, top-right, bottom-left, bottom-right."
+    "Rotate the entire grid 90° clockwise.",
+    "Rows become columns from left to right.",
+    "⬛ rotates like any other cell."
   ]
 }

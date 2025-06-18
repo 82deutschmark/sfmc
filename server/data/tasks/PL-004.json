@@ -1,29 +1,29 @@
 {
   "id": "PL-004",
-  "title": "Launch System Transpose",
-  "description": "Pre-launch equipment arrays require matrix transpose configuration. Rows become columns in the transformation.",
+  "title": "Vertical Mirror Check",
+  "description": "Mirror pre-launch indicator grid vertically (top ↔ bottom) to verify symmetry.",
   "category": "🚀 Pre-Launch Ops",
   "difficulty": "Basic",
-  "gridSize": 2,
+  "gridSize": 3,
   "timeLimit": null,
-  "basePoints": 370,
+  "basePoints": 500,
   "requiredRankLevel": 1,
   "emojiSet": "tech_set1",
   "examples": [
     {
-      "input": [["🔋", "🔋"], ["📡", "🔭"]],
-      "output": [["🔋", "📡"], ["🔋", "🔭"]]
+      "input": [[1,0,0],[2,3,0],[4,0,5]],
+      "output": [[4,0,5],[2,3,0],[1,0,0]]
     },
     {
-      "input": [["🛩️", "⬛"], ["⚡", "🛩️"]],
-      "output": [["🛩️", "⚡"], ["⬛", "🛩️"]]
+      "input": [[0,6,0],[7,0,8],[0,9,0]],
+      "output": [[0,9,0],[7,0,8],[0,6,0]]
     }
   ],
-  "testInput": [["🔭", "🎛️"], ["🔋", "⚙️"]],
-  "testOutput": [["🔭", "🔋"], ["🎛️", "⚙️"]],
+  "testInput": [[1,0,2],[0,3,0],[4,0,5]],
+  "testOutput": [[4,0,5],[0,3,0],[1,0,2]],
   "hints": [
-    "Matrix transpose: rows become columns and columns become rows.",
-    "Top-right element moves to bottom-left position.",
-    "The main diagonal (top-left to bottom-right) stays unchanged."
+    "Flip the grid top-to-bottom.",
+    "Rows swap positions; columns remain the same.",
+    "⬛ moves with the row like any other value."
   ]
 }

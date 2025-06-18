@@ -22,8 +22,8 @@
   "testInput": [["↖️", "⬛"], ["⬛", "↘️"]],
   "testOutput": [["⬛", "⬛"], ["↖️", "↘️"]],
   "hints": [
-    "All non-empty elements drop to the bottom row.",
+    "All non-⬛ elements drop to the bottom row.",
     "Maintain column positions during the drop operation.",
-    "Top row becomes completely empty after stacking."
+    "Top row becomes completely ⬛ after stacking."
   ]
 }

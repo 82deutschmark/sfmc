@@ -8,22 +8,76 @@
   "timeLimit": null,
   "basePoints": 365,
   "requiredRankLevel": 1,
-  "emojiSet": "tech_set2",
+  "emojiSet": "tech_set1",
   "examples": [
     {
-      "input": [["⚙️", "⬛"], ["⬛", "🔧"]],
-      "output": [["⚙️", "🔧"], ["⬛", "⬛"]]
+      "input": [
+        [
+          8,
+          0
+        ],
+        [
+          0,
+          1
+        ]
+      ],
+      "output": [
+        [
+          8,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
     },
     {
-      "input": [["⬛", "🛠️"], ["⚛️", "⬛"]],
-      "output": [["⚛️", "🛠️"], ["⬛", "⬛"]]
+      "input": [
+        [
+          0,
+          1
+        ],
+        [
+          2,
+          0
+        ]
+      ],
+      "output": [
+        [
+          2,
+          1
+        ],
+        [
+          0,
+          0
+        ]
+      ]
     }
   ],
-  "testInput": [["🔋", "⬛"], ["⬛", "🖱️"]],
-  "testOutput": [["🔋", "🖱️"], ["⬛", "⬛"]],
+  "testInput": [
+    [
+      5,
+      0
+    ],
+    [
+      0,
+      3
+    ]
+  ],
+  "testOutput": [
+    [
+      5,
+      3
+    ],
+    [
+      0,
+      0
+    ]
+  ],
   "hints": [
-    "Collect all non-empty elements to the top row.",
-    "Empty spaces fill the bottom row completely.",
+    "Collect all non-⬛ elements to the top row.",
+    "⬛ spaces fill the bottom row completely.",
     "Maintain left-to-right order of collected elements."
   ]
 }

@@ -1,0 +1,29 @@
+{
+  "id": "PL-009",
+  "title": "Pre-Launch 270° Rotation",
+  "description": "Rotate the indicator grid 270° clockwise (or 90° counter-clockwise) to match the final launch control orientation.",
+  "category": "🚀 Pre-Launch Ops",
+  "difficulty": "Basic",
+  "gridSize": 4,
+  "timeLimit": null,
+  "basePoints": 600,
+  "requiredRankLevel": 1,
+  "emojiSet": "tech_set1",
+  "examples": [
+    {
+      "input": [[1,0,0,2],[0,3,4,0],[0,5,6,0],[7,0,0,8]],
+      "output": [[2,0,0,8],[0,4,6,0],[0,3,5,0],[1,0,0,7]]
+    },
+    {
+      "input": [[0,0,9,0],[0,8,0,7],[6,0,5,0],[0,4,0,0]],
+      "output": [[0,7,0,0],[0,0,5,8],[4,0,0,9],[0,6,0,0]]
+    }
+  ],
+  "testInput": [[0,1,0,2],[3,0,4,0],[0,5,0,6],[7,0,8,0]],
+  "testOutput": [[2,0,0,0],[0,4,6,1],[0,3,5,0],[7,0,0,8]],
+  "hints": [
+    "Rotate the entire grid 270° clockwise (90° counter-clockwise).",
+    "Columns become rows from bottom to top.",
+    "⬛ rotates like any other cell."
+  ]
+}

@@ -1,3 +1,9 @@
+/*
+  index.ts
+  Main server entry point. Sets up Express, registers routes, and starts the server.
+  On Windows, listen on 127.0.0.1:5000 for compatibility (fixes ENOTSUP error).
+  Author: GPT 4.1 (Cascade AI)
+*/
 import express, { type Request, Response, NextFunction } from "express";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
@@ -60,10 +66,11 @@ app.use((req, res, next) => {
   // this serves both the API and the client.
   // It is the only port that is not firewalled.
   const port = 5000;
+  // On Windows, using host '0.0.0.0' and reusePort can cause ENOTSUP errors.
+  // Use '127.0.0.1' and remove reusePort for compatibility.
   server.listen({
     port,
-    host: "0.0.0.0",
-    reusePort: true,
+    host: "127.0.0.1"
   }, () => {
     log(`serving on port ${port}`);
   });

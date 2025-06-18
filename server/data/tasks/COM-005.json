@@ -1,29 +1,53 @@
 {
   "id": "COM-005",
-  "title": "Signal Pattern Duplication",
-  "description": "Communication arrays require pattern duplication protocols. Specific elements replicate to adjacent positions.",
+  "title": "Relay 180° Rotation",
+  "description": "Stabilize communication relay map by rotating the grid 180°.",
   "category": "📡 Communications",
   "difficulty": "Basic",
-  "gridSize": 2,
+  "gridSize": 3,
   "timeLimit": null,
-  "basePoints": 290,
+  "basePoints": 480,
   "requiredRankLevel": 1,
-  "emojiSet": "tech_set1",
+  "emojiSet": "tech_set2",
   "examples": [
     {
-      "input": [["📡", "⬛"], ["⬛", "📱"]],
-      "output": [["📡", "📡"], ["📱", "📱"]]
+      "input": [
+        [1, 0, 2],
+        [3, 4, 0],
+        [0, 5, 6]
+      ],
+      "output": [
+        [6, 5, 0],
+        [0, 4, 3],
+        [2, 0, 1]
+      ]
     },
     {
-      "input": [["🛩️", "⬛"], ["⬛", "🔭"]],
-      "output": [["🛩️", "🛩️"], ["🔭", "🔭"]]
+      "input": [
+        [0, 7, 8],
+        [0, 0, 9],
+        [1, 0, 0]
+      ],
+      "output": [
+        [0, 0, 1],
+        [9, 0, 0],
+        [8, 7, 0]
+      ]
     }
   ],
-  "testInput": [["🔭", "⬛"], ["⬛", "🖥️"]],
-  "testOutput": [["🔭", "🔭"], ["🖥️", "🖥️"]],
+  "testInput": [
+    [2, 0, 0],
+    [0, 3, 4],
+    [5, 0, 0]
+  ],
+  "testOutput": [
+    [0, 0, 5],
+    [4, 3, 0],
+    [0, 0, 2]
+  ],
   "hints": [
-    "Non-empty elements duplicate to their adjacent empty space.",
-    "Each element fills its corresponding row completely.",
-    "Empty spaces become filled with their diagonal element."
+    "Rotate the grid 180° (flip horizontally then vertically).",
+    "Each cell moves to its diagonally opposite position.",
+    "⬛ remains ⬛ after rotation."
   ]
 }

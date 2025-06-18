@@ -1,7 +1,7 @@
 {
   "id": "PL-001",
   "title": "Pre-Launch Sequence Alpha",
-  "description": "Critical pre-launch systems require pattern verification. Study the radar and equipment positioning patterns.",
+  "description": "Mirror pre-launch panel indicators across the vertical axis to verify symmetry before ignition.",
   "category": "🚀 Pre-Launch Ops",
   "difficulty": "Basic",
   "gridSize": 2,
@@ -11,19 +11,19 @@
   "emojiSet": "tech_set1",
   "examples": [
     {
-      "input": [["🛩️", "⬛"], ["⬛", "📡"]],
-      "output": [["📡", "⬛"], ["⬛", "🛩️"]]
+      "input": [[1, 0], [2, 0]],
+      "output": [[0, 1], [0, 2]]
     },
     {
-      "input": [["🔭", "⚡"], ["⬛", "⬛"]],
-      "output": [["⬛", "⬛"], ["⚡", "🔭"]]
+      "input": [[0, 3], [4, 5]],
+      "output": [[3, 0], [5, 4]]
     }
   ],
-  "testInput": [["🔋", "⬛"], ["🔋", "⬛"]],
-  "testOutput": [["⬛", "🔋"], ["⬛", "🔋"]],
+  "testInput": [[6, 0], [0, 7]],
+  "testOutput": [[0, 6], [7, 0]],
   "hints": [
-    "Look at how equipment positions change between input and output.",
-    "The transformation swaps elements diagonally across the grid.",
-    "Each non-empty cell moves to the opposite diagonal position."
+    "Reflect the grid left-to-right.",
+    "Columns swap positions; rows stay the same.",
+    "⬛ represents background and remains where no component exists."
   ]
 }

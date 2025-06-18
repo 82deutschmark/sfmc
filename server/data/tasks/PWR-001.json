@@ -1,45 +1,59 @@
 {
   "id": "PWR-001",
   "title": "Power Grid Cascade Analysis",
-  "description": "Energy distribution systems require cascade failure prevention. Analyze how power flows through connected components.",
+  "description": "Energy distribution systems require cascade failure prevention. Rotate the component matrix 180° to predict cascade flow.",
   "category": "⚡ Power Systems",
   "difficulty": "Advanced",
   "gridSize": 4,
-  "timeLimit": 240,
+  "timeLimit": null,
   "basePoints": 900,
-  "requiredRankLevel": 3,
-  "emojiSet": "tech_set2",
+  "requiredRankLevel": 1,
+  "emojiSet": "tech_set1",
   "examples": [
     {
       "input": [
-        ["🔋", "⬛", "⬛", "⬛"],
-        ["⬛", "⚡", "⬛", "⬛"],
-        ["⬛", "⬛", "⚡", "⬛"],
-        ["⬛", "⬛", "⬛", "📺"]
+        [1, 0, 0, 2],
+        [0, 3, 4, 0],
+        [0, 4, 3, 0],
+        [5, 0, 0, 6]
       ],
       "output": [
-        ["🔋", "🖱️", "⬛", "⬛"],
-        ["🖱️", "⚡", "🖱️", "⬛"],
-        ["⬛", "🖱️", "⚡", "🖱️"],
-        ["⬛", "⬛", "🖱️", "📺"]
+        [6, 0, 0, 5],
+        [0, 4, 3, 0],
+        [0, 3, 4, 0],
+        [2, 0, 0, 1]
+      ]
+    },
+    {
+      "input": [
+        [7, 8, 0, 0],
+        [0, 9, 0, 0],
+        [0, 0, 5, 0],
+        [0, 0, 0, 2]
+      ],
+      "output": [
+        [2, 0, 0, 0],
+        [0, 5, 0, 0],
+        [0, 0, 9, 0],
+        [0, 0, 8, 7]
       ]
     }
   ],
   "testInput": [
-    ["🔋", "⬛", "⬛", "⬛"],
-    ["⬛", "⬛", "⚡", "⬛"],
-    ["⬛", "⚡", "⬛", "⬛"],
-    ["⬛", "⬛", "⬛", "📺"]
+    [8, 0, 0, 1],
+    [0, 6, 7, 0],
+    [0, 7, 6, 0],
+    [2, 0, 0, 5]
   ],
   "testOutput": [
-    ["🔋", "🖱️", "⬛", "⬛"],
-    ["🖱️", "🖱️", "⚡", "🖱️"],
-    ["⬛", "⚡", "🖱️", "🖱️"],
-    ["⬛", "⬛", "🖱️", "📺"]
+    [5, 0, 0, 2],
+    [0, 7, 6, 0],
+    [0, 6, 7, 0],
+    [1, 0, 0, 8]
   ],
   "hints": [
-    "Power flows from the battery to the light through the shortest path.",
-    "Power nodes (⚡) act as connection points in the grid.",
-    "Empty spaces between connected components become power lines (🖱️)."
+    "Visualize the grid turning upside-down and reversed.",
+    "A 180° rotation moves each component to its diagonally opposite position.",
+    "Background cells ⬛ remain unchanged after rotation."
   ]
 }

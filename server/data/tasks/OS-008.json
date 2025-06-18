@@ -47,7 +47,7 @@
   ],
   "hints": [
     "The center signal propagates to fill the entire grid.",
-    "All empty spaces adopt the center element's properties.",
+    "All ⬛ spaces adopt the center element's properties.",
     "Wave expansion covers the complete sensor array uniformly."
   ]
 }

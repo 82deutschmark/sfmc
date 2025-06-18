@@ -1,29 +1,53 @@
 {
   "id": "COM-003",
-  "title": "Signal Pattern Identity",
-  "description": "Communication arrays require identity transformation verification. Input pattern must remain unchanged.",
+  "title": "Relay Vertical Reflection",
+  "description": "Verify relay indicators by reflecting the grid vertically (top ↔ bottom).",
   "category": "📡 Communications",
   "difficulty": "Basic",
-  "gridSize": 2,
+  "gridSize": 3,
   "timeLimit": null,
-  "basePoints": 280,
+  "basePoints": 440,
   "requiredRankLevel": 1,
-  "emojiSet": "tech_set1",
+  "emojiSet": "tech_set2",
   "examples": [
     {
-      "input": [["📡", "📱"], ["🛩️", "🔭"]],
-      "output": [["📡", "📱"], ["🛩️", "🔭"]]
+      "input": [
+        [1, 0, 2],
+        [0, 3, 0],
+        [4, 0, 5]
+      ],
+      "output": [
+        [4, 0, 5],
+        [0, 3, 0],
+        [1, 0, 2]
+      ]
     },
     {
-      "input": [["🔭", "⬛"], ["⬛", "⚡"]],
-      "output": [["🔭", "⬛"], ["⬛", "⚡"]]
+      "input": [
+        [0, 6, 0],
+        [7, 0, 8],
+        [0, 0, 9]
+      ],
+      "output": [
+        [0, 0, 9],
+        [7, 0, 8],
+        [0, 6, 0]
+      ]
     }
   ],
-  "testInput": [["🛩️", "⚡"], ["📱", "🔋"]],
-  "testOutput": [["🛩️", "⚡"], ["📱", "🔋"]],
+  "testInput": [
+    [2, 0, 0],
+    [0, 3, 4],
+    [5, 0, 0]
+  ],
+  "testOutput": [
+    [5, 0, 0],
+    [0, 3, 4],
+    [2, 0, 0]
+  ],
   "hints": [
-    "The transformation is the identity function.",
-    "Input and output grids are exactly the same.",
-    "No changes are made to any positions."
+    "Flip the grid top-to-bottom.",
+    "Rows swap positions; columns remain the same.",
+    "⬛ cells flip along with all other values."
   ]
 }
